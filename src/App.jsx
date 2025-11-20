@@ -1,11 +1,6 @@
-import React from 'react'
-import Header from './components/Header'
+import React from 'react';
+import AppRouter from './router';
 
-export default function App(){
-  return (
-    <div>
-      <Header />
-  
-    </div>
-  )
+export default function App() {
+  return <AppRouter />;
 }

@@ -2,8 +2,14 @@
 import React from 'react';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import LockIcon from '@mui/icons-material/Lock';
+import { useNavigate } from 'react-router-dom';
 
 export default function Login() {
+  const navigate = useNavigate();
+  const goHome = (e) => {
+    e.preventDefault();
+    navigate('/home');
+  };
   return (
     <div className="min-h-screen flex flex-col items-center justify-start relative" style={{
       background: 'linear-gradient(180deg, #0f2027 0%, #2c5364 100%)'
@@ -38,13 +44,22 @@ export default function Login() {
           <button className="text-gray-600 font-semibold text-sm hover:underline">Reset password</button>
         </div>
         {/* Botón Login */}
-        <button className="w-full py-3 mb-3 rounded-lg text-xl font-bold text-white bg-gradient-to-r from-blue-900 to-teal-600 shadow-md hover:opacity-90 transition">Login</button>
+        <button
+          className="w-full py-3 mb-3 rounded-lg text-xl font-bold text-white bg-gradient-to-r from-blue-900 to-teal-600 shadow-md hover:opacity-90 transition"
+          onClick={goHome}
+        >
+          Login
+        </button>
         {/* Botón Crear cuenta */}
         <button className="w-full py-3 mb-6 rounded-lg text-xl font-bold text-gray-700 bg-gray-300 shadow hover:bg-gray-400 transition">Create Account</button>
         {/* Login con Google y Facebook */}
         <div className="flex gap-8 justify-center">
-          <button className="bg-white border rounded-full p-3 shadow hover:shadow-lg transition"><img src="https://pngimg.com/uploads/google/google_PNG19635.png" alt="Google" className="w-8 h-8" /></button>
-          <button className="bg-white border rounded-full p-3 shadow hover:shadow-lg transition"><img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" className="w-8 h-8" /></button>
+          <button className="bg-white border rounded-full p-3 shadow hover:shadow-lg transition" onClick={goHome}>
+            <img src="https://pngimg.com/uploads/google/google_PNG19635.png" alt="Google" className="w-8 h-8" />
+          </button>
+          <button className="bg-white border rounded-full p-3 shadow hover:shadow-lg transition" onClick={goHome}>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Facebook_Logo_%282019%29.png" alt="Facebook" className="w-8 h-8" />
+          </button>
         </div>
       </div>
     </div>

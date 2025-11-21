@@ -2,5 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Declaración de fuentes */
+@font-face {
+    font-family:'AntonCustom' ;
+    src: url('/src/fonts/Anton-Regular.ttf')format('truetype');
+}
+
+
 /* Estilos personalizados */
-body { @apply bg-gray-50; }
+body { 
+    @apply min-h-screen bg-gradient-to-b from-blue-900 to-slate-900;
+ }

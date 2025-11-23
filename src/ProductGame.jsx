@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import Header from './components/Header';
-import Footer from './components/Footer';
+import Footer from './components/footer';
 import { Button } from './components/button';
 import { useGameStore } from './store/gameStore';
 import { ArrowLeftIcon, ShoppingCartIcon } from 'lucide-react';

@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './components/Login';
 import Home from './Home';
+import ProductPage from './ProductGame';
 
 export default function AppRouter() {
   return (
@@ -9,6 +10,7 @@ export default function AppRouter() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/home" element={<Home />} />
+        <Route path='producto/:id' element={<ProductPage/>} />
       </Routes>
     </BrowserRouter>
   );

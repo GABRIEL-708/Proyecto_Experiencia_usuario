@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        anton: ['AntonCustom']
+        Anton: ['AntonCustom']
       }
     },
   },

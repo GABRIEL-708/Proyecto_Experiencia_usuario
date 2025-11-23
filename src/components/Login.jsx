@@ -12,7 +12,7 @@ export default function Login() {
   };
   return (
     <div className="min-h-screen flex flex-col items-center justify-start relative" style={{
-      background: 'linear-gradient(180deg, #0f2027 0%, #2c5364 100%)'
+     
     }}>
       {/* Fondo superior con imagen y overlay */}
   <div className="w-full h-80 md:h-[420px] relative">
